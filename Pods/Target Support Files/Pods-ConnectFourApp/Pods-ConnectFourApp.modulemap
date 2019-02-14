@@ -1,0 +1,6 @@
+framework module Pods_ConnectFourApp {
+  umbrella header "Pods-ConnectFourApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

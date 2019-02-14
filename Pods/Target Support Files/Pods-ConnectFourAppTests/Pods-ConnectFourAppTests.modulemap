@@ -1,0 +1,6 @@
+framework module Pods_ConnectFourAppTests {
+  umbrella header "Pods-ConnectFourAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

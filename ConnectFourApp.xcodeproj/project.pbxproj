@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E88F6BA2214E11D00AFB624 /* CheckForWinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E88F6B92214E11D00AFB624 /* CheckForWinner.swift */; };
+		7E88F6BC2214FD4B00AFB624 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E88F6BB2214FD4B00AFB624 /* GoogleService-Info.plist */; };
 		7E8D456C221391DB00FE10CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D456B221391DB00FE10CA /* AppDelegate.swift */; };
 		7E8D456E221391DB00FE10CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D456D221391DB00FE10CA /* ViewController.swift */; };
 		7E8D4571221391DB00FE10CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E8D456F221391DB00FE10CA /* Main.storyboard */; };
-		7E8D4573221391DC00FE10CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8D4572221391DC00FE10CA /* Assets.xcassets */; };
 		7E8D4576221391DC00FE10CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E8D4574221391DC00FE10CA /* LaunchScreen.storyboard */; };
 		7E8D4581221391DD00FE10CA /* ConnectFourAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D4580221391DD00FE10CA /* ConnectFourAppTests.swift */; };
+		7E8D45932213925600FE10CA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D45922213925600FE10CA /* Player.swift */; };
+		7E8D45952213927400FE10CA /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D45942213927400FE10CA /* Token.swift */; };
+		7E8D45972213957E00FE10CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8D45962213957E00FE10CA /* Assets.xcassets */; };
+		7E8D4599221395CE00FE10CA /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D4598221395CE00FE10CA /* Board.swift */; };
+		7E8D459B221398A900FE10CA /* AddTokenToGameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D459A221398A800FE10CA /* AddTokenToGameBoard.swift */; };
+		7E8D459F2213A35400FE10CA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D459E2213A35400FE10CA /* AppConstants.swift */; };
+		7E8D45A12213A39B00FE10CA /* BoardViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D45A02213A39B00FE10CA /* BoardViewPresenter.swift */; };
+		7E8D45A32213A54500FE10CA /* BoardCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E8D45A22213A54500FE10CA /* BoardCellView.xib */; };
+		7E8D45A52213A61A00FE10CA /* BoardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D45A42213A61A00FE10CA /* BoardViewCell.swift */; };
+		9F4123F478AE2D73AB16BA0C /* Pods_ConnectFourApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD56E66F0BB047CB22DCD603 /* Pods_ConnectFourApp.framework */; };
+		AF0678B66FDBC74E453CF017 /* Pods_ConnectFourAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE758B1CC5344FEEFCF8B45 /* Pods_ConnectFourAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +38,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08FBEE5A3802149234307740 /* Pods-ConnectFourAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectFourAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectFourAppTests/Pods-ConnectFourAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		23B489E90EB42888B0E1AEBF /* Pods-ConnectFourApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectFourApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectFourApp/Pods-ConnectFourApp.debug.xcconfig"; sourceTree = "<group>"; };
+		2F73DC8297FDCF1DDADCCB6C /* Pods-ConnectFourApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectFourApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectFourApp/Pods-ConnectFourApp.release.xcconfig"; sourceTree = "<group>"; };
+		51043B5E533E25C8821B8EE0 /* Pods-ConnectFourAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectFourAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectFourAppTests/Pods-ConnectFourAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E88F6B92214E11D00AFB624 /* CheckForWinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForWinner.swift; sourceTree = "<group>"; };
+		7E88F6BB2214FD4B00AFB624 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7E8D4568221391DB00FE10CA /* ConnectFourApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectFourApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8D456B221391DB00FE10CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E8D456D221391DB00FE10CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E8D4570221391DB00FE10CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7E8D4572221391DC00FE10CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E8D4575221391DC00FE10CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E8D4577221391DC00FE10CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E8D457C221391DD00FE10CA /* ConnectFourAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectFourAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8D4580221391DD00FE10CA /* ConnectFourAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourAppTests.swift; sourceTree = "<group>"; };
 		7E8D4582221391DD00FE10CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E8D45922213925600FE10CA /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		7E8D45942213927400FE10CA /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		7E8D45962213957E00FE10CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E8D4598221395CE00FE10CA /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		7E8D459A221398A800FE10CA /* AddTokenToGameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTokenToGameBoard.swift; sourceTree = "<group>"; };
+		7E8D459E2213A35400FE10CA /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		7E8D45A02213A39B00FE10CA /* BoardViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewPresenter.swift; sourceTree = "<group>"; };
+		7E8D45A22213A54500FE10CA /* BoardCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardCellView.xib; sourceTree = "<group>"; };
+		7E8D45A42213A61A00FE10CA /* BoardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewCell.swift; sourceTree = "<group>"; };
+		BD56E66F0BB047CB22DCD603 /* Pods_ConnectFourApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectFourApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE758B1CC5344FEEFCF8B45 /* Pods_ConnectFourAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectFourAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4123F478AE2D73AB16BA0C /* Pods_ConnectFourApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +79,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0678B66FDBC74E453CF017 /* Pods_ConnectFourAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68052060C0DFCCFBD98736D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD56E66F0BB047CB22DCD603 /* Pods_ConnectFourApp.framework */,
+				EEE758B1CC5344FEEFCF8B45 /* Pods_ConnectFourAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7E8D455F221391DB00FE10CA = {
 			isa = PBXGroup;
 			children = (
 				7E8D456A221391DB00FE10CA /* ConnectFourApp */,
 				7E8D457F221391DD00FE10CA /* ConnectFourAppTests */,
 				7E8D4569221391DB00FE10CA /* Products */,
+				8C1801BA755E054222C65903 /* Pods */,
+				68052060C0DFCCFBD98736D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +118,13 @@
 		7E8D456A221391DB00FE10CA /* ConnectFourApp */ = {
 			isa = PBXGroup;
 			children = (
+				7E8D458D221391FD00FE10CA /* Core */,
+				7E8D458C221391F600FE10CA /* Presenters */,
+				7E8D458B221391EC00FE10CA /* Views */,
 				7E8D456B221391DB00FE10CA /* AppDelegate.swift */,
-				7E8D456D221391DB00FE10CA /* ViewController.swift */,
-				7E8D456F221391DB00FE10CA /* Main.storyboard */,
-				7E8D4572221391DC00FE10CA /* Assets.xcassets */,
-				7E8D4574221391DC00FE10CA /* LaunchScreen.storyboard */,
+				7E8D45962213957E00FE10CA /* Assets.xcassets */,
 				7E8D4577221391DC00FE10CA /* Info.plist */,
+				7E88F6BB2214FD4B00AFB624 /* GoogleService-Info.plist */,
 			);
 			path = ConnectFourApp;
 			sourceTree = "<group>";
@@ -96,6 +138,82 @@
 			path = ConnectFourAppTests;
 			sourceTree = "<group>";
 		};
+		7E8D458B221391EC00FE10CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E8D45912213921F00FE10CA /* ViewControllers */,
+				7E8D45902213921800FE10CA /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7E8D458C221391F600FE10CA /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				7E8D45A02213A39B00FE10CA /* BoardViewPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		7E8D458D221391FD00FE10CA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7E8D458F2213920A00FE10CA /* UseCases */,
+				7E8D458E2213920300FE10CA /* Entities */,
+				7E8D459E2213A35400FE10CA /* AppConstants.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7E8D458E2213920300FE10CA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7E8D45922213925600FE10CA /* Player.swift */,
+				7E8D45942213927400FE10CA /* Token.swift */,
+				7E8D4598221395CE00FE10CA /* Board.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7E8D458F2213920A00FE10CA /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				7E8D459A221398A800FE10CA /* AddTokenToGameBoard.swift */,
+				7E88F6B92214E11D00AFB624 /* CheckForWinner.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		7E8D45902213921800FE10CA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7E8D456F221391DB00FE10CA /* Main.storyboard */,
+				7E8D4574221391DC00FE10CA /* LaunchScreen.storyboard */,
+				7E8D45A22213A54500FE10CA /* BoardCellView.xib */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7E8D45912213921F00FE10CA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E8D456D221391DB00FE10CA /* ViewController.swift */,
+				7E8D45A42213A61A00FE10CA /* BoardViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8C1801BA755E054222C65903 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23B489E90EB42888B0E1AEBF /* Pods-ConnectFourApp.debug.xcconfig */,
+				2F73DC8297FDCF1DDADCCB6C /* Pods-ConnectFourApp.release.xcconfig */,
+				51043B5E533E25C8821B8EE0 /* Pods-ConnectFourAppTests.debug.xcconfig */,
+				08FBEE5A3802149234307740 /* Pods-ConnectFourAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E8D4585221391DD00FE10CA /* Build configuration list for PBXNativeTarget "ConnectFourApp" */;
 			buildPhases = (
+				56FADB133876711B831D16E5 /* [CP] Check Pods Manifest.lock */,
 				7E8D4564221391DB00FE10CA /* Sources */,
 				7E8D4565221391DB00FE10CA /* Frameworks */,
 				7E8D4566221391DB00FE10CA /* Resources */,
+				DFAE309086867BA445B4992C /* [CP] Embed Pods Frameworks */,
+				10A1683D69FF2B41BE212B44 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E8D4588221391DD00FE10CA /* Build configuration list for PBXNativeTarget "ConnectFourAppTests" */;
 			buildPhases = (
+				69A619EC64BA2772B9E33369 /* [CP] Check Pods Manifest.lock */,
 				7E8D4578221391DD00FE10CA /* Sources */,
 				7E8D4579221391DD00FE10CA /* Frameworks */,
 				7E8D457A221391DD00FE10CA /* Resources */,
+				BFDE124F7A3D63F754F9F2E0 /* [CP] Embed Pods Frameworks */,
+				57BE0D75D46D54F9F58C86AA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,7 +302,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E8D4576221391DC00FE10CA /* LaunchScreen.storyboard in Resources */,
-				7E8D4573221391DC00FE10CA /* Assets.xcassets in Resources */,
+				7E8D45A32213A54500FE10CA /* BoardCellView.xib in Resources */,
+				7E88F6BC2214FD4B00AFB624 /* GoogleService-Info.plist in Resources */,
+				7E8D45972213957E00FE10CA /* Assets.xcassets in Resources */,
 				7E8D4571221391DB00FE10CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,13 +318,125 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10A1683D69FF2B41BE212B44 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConnectFourApp/Pods-ConnectFourApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56FADB133876711B831D16E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ConnectFourApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57BE0D75D46D54F9F58C86AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConnectFourAppTests/Pods-ConnectFourAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69A619EC64BA2772B9E33369 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ConnectFourAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFDE124F7A3D63F754F9F2E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConnectFourAppTests/Pods-ConnectFourAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFAE309086867BA445B4992C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ConnectFourApp/Pods-ConnectFourApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConnectFourApp/Pods-ConnectFourApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7E8D4564221391DB00FE10CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8D45A52213A61A00FE10CA /* BoardViewCell.swift in Sources */,
 				7E8D456E221391DB00FE10CA /* ViewController.swift in Sources */,
+				7E8D459B221398A900FE10CA /* AddTokenToGameBoard.swift in Sources */,
+				7E88F6BA2214E11D00AFB624 /* CheckForWinner.swift in Sources */,
+				7E8D459F2213A35400FE10CA /* AppConstants.swift in Sources */,
+				7E8D45932213925600FE10CA /* Player.swift in Sources */,
+				7E8D45A12213A39B00FE10CA /* BoardViewPresenter.swift in Sources */,
+				7E8D4599221395CE00FE10CA /* Board.swift in Sources */,
 				7E8D456C221391DB00FE10CA /* AppDelegate.swift in Sources */,
+				7E8D45952213927400FE10CA /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,14 +596,13 @@
 		};
 		7E8D4586221391DD00FE10CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23B489E90EB42888B0E1AEBF /* Pods-ConnectFourApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WYWUC4P4DY;
 				INFOPLIST_FILE = ConnectFourApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ConnectFourApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -375,14 +612,13 @@
 		};
 		7E8D4587221391DD00FE10CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F73DC8297FDCF1DDADCCB6C /* Pods-ConnectFourApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WYWUC4P4DY;
 				INFOPLIST_FILE = ConnectFourApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ConnectFourApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -392,16 +628,13 @@
 		};
 		7E8D4589221391DD00FE10CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51043B5E533E25C8821B8EE0 /* Pods-ConnectFourAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConnectFourAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ConnectFourAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -412,16 +645,13 @@
 		};
 		7E8D458A221391DD00FE10CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08FBEE5A3802149234307740 /* Pods-ConnectFourAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConnectFourAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ConnectFourAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
