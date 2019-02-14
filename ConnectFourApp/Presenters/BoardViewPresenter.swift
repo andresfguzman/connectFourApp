@@ -77,9 +77,32 @@ final class BoardViewPresenter {
         view.playersChanged(playerOneNick: player1.name, playerTwoNick: player2.name)
     }
     
-    private func setPlayerMoves() {
-        player1.moves = board.tokenSlots.filter { $0.player.id == player1.id }.count
-        player2.moves = board.tokenSlots.count - player1.moves
+    // TODO: This should be placed inside a use case.
+    func getRemoteGameResults(completion: @escaping () -> Void) {
+        var gameResults = [GameResults]()
+        db.collection("finishedGames").getDocuments { [weak self] (querySnapshot, err) in
+            if let error = err {
+                print("Error getting document: \(error)")
+            } else {
+                for document in querySnapshot!.documents {
+                    gameResults.append(RawGameResults(players: self?.parsePlayers(dict: document.data()) ?? []))
+                }
+                self?.gameResults = gameResults
+                completion()
+            }
+        }
+    }
+}
+
+private extension BoardViewPresenter {
+    func parsePlayers(dict: Dictionary<String, Any>) -> [Player] {
+        var resultPlayers = [Player]()
+        if let playersArray = dict["players"] as? [[String: Any]] {
+            for player in playersArray {
+                resultPlayers.append(RawPlayer(moves: player["moves"] as! Int, id: 0, name: player["userName"] as! String, color: .red, didWin: player["didWin"] as! Bool))
+            }
+        }
+        return resultPlayers
     }
     
     // TODO: This should be called inside a service from a usecase not here
@@ -107,30 +130,8 @@ final class BoardViewPresenter {
         }
     }
     
-    // TODO: This should be placed inside a use case.
-    func getRemoteGameResults(completion: @escaping () -> Void) {
-        var gameResults = [GameResults]()
-        db.collection("finishedGames").getDocuments { [weak self] (querySnapshot, err) in
-            if let error = err {
-                print("Error getting document: \(error)")
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    gameResults.append(RawGameResults(players: self?.parsePlayers(dict: document.data()) ?? []))
-                }
-                self?.gameResults = gameResults
-                completion()
-            }
-        }
-    }
-    
-    func parsePlayers(dict: Dictionary<String, Any>) -> [Player] {
-        var resultPlayers = [Player]()
-        if let playersArray = dict["players"] as? [[String: Any]] {
-            for player in playersArray {
-                resultPlayers.append(RawPlayer(moves: player["moves"] as! Int, id: 0, name: player["userName"] as! String, color: .red, didWin: player["didWin"] as! Bool))
-            }
-        }
-        return resultPlayers
+    func setPlayerMoves() {
+        player1.moves = board.tokenSlots.filter { $0.player.id == player1.id }.count
+        player2.moves = board.tokenSlots.count - player1.moves
     }
 }
