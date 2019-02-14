@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uFB-zf-gA6">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uFB-zf-gA6">
                                 <rect key="frame" x="9.3333333333333428" y="285" width="356.33333333333326" height="296"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -84,7 +84,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="XjI-gI-WAg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="DTl-Q4-PNt"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="8CH-m9-wJE">
+                            <connections>
+                                <segue destination="kA4-uO-trE" kind="popoverPresentation" popoverAnchorBarButtonItem="8CH-m9-wJE" id="bvZ-4u-4ZQ">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="DTl-Q4-PNt">
+                            <connections>
+                                <segue destination="UuF-d1-uUa" kind="show" id="JgP-nn-Xaz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="boardCollectionView" destination="uFB-zf-gA6" id="4aB-Kb-lmZ"/>
@@ -97,10 +108,44 @@
             </objects>
             <point key="canvasLocation" x="948" y="68.7192118226601"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Results View Controller-->
+        <scene sceneID="evb-Gg-S3g">
+            <objects>
+                <viewController id="UuF-d1-uUa" customClass="GameResultsViewController" customModule="ConnectFourApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zd4-Mq-prl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HFf-in-qgB">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UuF-d1-uUa" id="gic-85-ALM"/>
+                                    <outlet property="delegate" destination="UuF-d1-uUa" id="3pa-dV-0qt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1H5-SA-hqH" firstAttribute="trailing" secondItem="HFf-in-qgB" secondAttribute="trailing" id="ES6-dd-Zye"/>
+                            <constraint firstItem="1H5-SA-hqH" firstAttribute="bottom" secondItem="HFf-in-qgB" secondAttribute="bottom" id="Mxj-ie-gnz"/>
+                            <constraint firstItem="HFf-in-qgB" firstAttribute="leading" secondItem="1H5-SA-hqH" secondAttribute="leading" id="qVp-OD-W1f"/>
+                            <constraint firstItem="HFf-in-qgB" firstAttribute="top" secondItem="1H5-SA-hqH" secondAttribute="top" id="xit-aa-eOO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1H5-SA-hqH"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultsTableView" destination="HFf-in-qgB" id="oUW-hx-EqK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPp-2t-LMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1561" y="833"/>
+        </scene>
+        <!--Authenticate View Controller-->
         <scene sceneID="ZrS-GD-QKU">
             <objects>
-                <viewController id="kA4-uO-trE" sceneMemberID="viewController">
+                <viewController id="kA4-uO-trE" customClass="AuthenticateViewController" customModule="ConnectFourApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2G7-xZ-z5j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,13 +153,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zjX-6j-4ac">
                                 <rect key="frame" x="9.3333333333333428" y="376" width="356.33333333333326" height="70"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 1 Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OpQ-Zv-qoc">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="andres.guzman" borderStyle="roundedRect" placeholder="Player 1 Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OpQ-Zv-qoc">
                                         <rect key="frame" x="0.0" y="0.0" width="356.33333333333331" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2 Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOa-C5-OYW">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="guzman.andres" borderStyle="roundedRect" placeholder="Player 2 Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOa-C5-OYW">
                                         <rect key="frame" x="0.0" y="40" width="356.33333333333331" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -125,6 +170,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvF-Xw-two">
                                 <rect key="frame" x="158" y="454" width="59" height="30"/>
                                 <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="logInPlayers:" destination="kA4-uO-trE" eventType="touchUpInside" id="gOL-36-Vyk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,10 +185,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2av-gY-Rp4"/>
                     </view>
+                    <connections>
+                        <outlet property="playerOneNicknameTextView" destination="OpQ-Zv-qoc" id="hqN-nN-OjC"/>
+                        <outlet property="playerTwoNicknameTextView" destination="eOa-C5-OYW" id="BfA-1d-dAh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2j3-gM-DFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-900" y="75"/>
+            <point key="canvasLocation" x="345" y="833"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QwE-6O-30W">

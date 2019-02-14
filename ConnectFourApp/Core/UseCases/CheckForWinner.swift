@@ -46,8 +46,7 @@ final class CheckForWinnerUseCase: CheckForWinner {
             if (startGamePieceType.player.color != hubToken?.player.color) {
                 return false
             }
-        }
-        
+        }        
         return true
     }
     

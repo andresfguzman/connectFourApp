@@ -7,6 +7,7 @@ target 'ConnectFourApp' do
 
   # Pods for ConnectFourApp
 pod 'Firebase/Core'
+pod 'Firebase/Firestore'
   target 'ConnectFourAppTests' do
     inherit! :search_paths
     # Pods for testing

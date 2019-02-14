@@ -10,4 +10,5 @@ import Foundation
 
 struct AppConstants {
     static let reusableCellID = "boardCell"
+    static let reusableGameCellID = "gameCellID"
 }

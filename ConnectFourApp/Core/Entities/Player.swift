@@ -14,6 +14,7 @@ protocol Player {
     var name: String {get set}
     var color: UIColor {get set}
     var moves: Int {get set}
+    var didWin: Bool {get set}
 }
 
 struct RawPlayer: Player {
@@ -24,4 +25,6 @@ struct RawPlayer: Player {
     var name: String
     
     var color: UIColor
+    
+    var didWin: Bool
 }

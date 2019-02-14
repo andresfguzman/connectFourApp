@@ -23,6 +23,11 @@
 		7E8D45A12213A39B00FE10CA /* BoardViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D45A02213A39B00FE10CA /* BoardViewPresenter.swift */; };
 		7E8D45A32213A54500FE10CA /* BoardCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E8D45A22213A54500FE10CA /* BoardCellView.xib */; };
 		7E8D45A52213A61A00FE10CA /* BoardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D45A42213A61A00FE10CA /* BoardViewCell.swift */; };
+		7E9EE5852215074B0062CC10 /* AuthenticateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9EE5842215074B0062CC10 /* AuthenticateViewController.swift */; };
+		7EECA30522152D2800838D11 /* GameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EECA30422152D2800838D11 /* GameResultsViewController.swift */; };
+		7EECA30722152D8700838D11 /* GameResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EECA30622152D8700838D11 /* GameResultCell.xib */; };
+		7EECA30A22152F2500838D11 /* GameResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EECA30922152F2500838D11 /* GameResultTableViewCell.swift */; };
+		7EECA310221537A200838D11 /* GameResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EECA30F221537A200838D11 /* GameResults.swift */; };
 		9F4123F478AE2D73AB16BA0C /* Pods_ConnectFourApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD56E66F0BB047CB22DCD603 /* Pods_ConnectFourApp.framework */; };
 		AF0678B66FDBC74E453CF017 /* Pods_ConnectFourAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE758B1CC5344FEEFCF8B45 /* Pods_ConnectFourAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +67,11 @@
 		7E8D45A02213A39B00FE10CA /* BoardViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewPresenter.swift; sourceTree = "<group>"; };
 		7E8D45A22213A54500FE10CA /* BoardCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardCellView.xib; sourceTree = "<group>"; };
 		7E8D45A42213A61A00FE10CA /* BoardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewCell.swift; sourceTree = "<group>"; };
+		7E9EE5842215074B0062CC10 /* AuthenticateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateViewController.swift; sourceTree = "<group>"; };
+		7EECA30422152D2800838D11 /* GameResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultsViewController.swift; sourceTree = "<group>"; };
+		7EECA30622152D8700838D11 /* GameResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameResultCell.xib; sourceTree = "<group>"; };
+		7EECA30922152F2500838D11 /* GameResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultTableViewCell.swift; sourceTree = "<group>"; };
+		7EECA30F221537A200838D11 /* GameResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResults.swift; sourceTree = "<group>"; };
 		BD56E66F0BB047CB22DCD603 /* Pods_ConnectFourApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectFourApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE758B1CC5344FEEFCF8B45 /* Pods_ConnectFourAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectFourAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,6 +151,7 @@
 		7E8D458B221391EC00FE10CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7EECA30822152EA400838D11 /* CustomViews */,
 				7E8D45912213921F00FE10CA /* ViewControllers */,
 				7E8D45902213921800FE10CA /* Storyboards */,
 			);
@@ -171,6 +182,7 @@
 				7E8D45922213925600FE10CA /* Player.swift */,
 				7E8D45942213927400FE10CA /* Token.swift */,
 				7E8D4598221395CE00FE10CA /* Board.swift */,
+				7EECA30F221537A200838D11 /* GameResults.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -189,7 +201,6 @@
 			children = (
 				7E8D456F221391DB00FE10CA /* Main.storyboard */,
 				7E8D4574221391DC00FE10CA /* LaunchScreen.storyboard */,
-				7E8D45A22213A54500FE10CA /* BoardCellView.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -198,9 +209,21 @@
 			isa = PBXGroup;
 			children = (
 				7E8D456D221391DB00FE10CA /* ViewController.swift */,
-				7E8D45A42213A61A00FE10CA /* BoardViewCell.swift */,
+				7E9EE5842215074B0062CC10 /* AuthenticateViewController.swift */,
+				7EECA30422152D2800838D11 /* GameResultsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7EECA30822152EA400838D11 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				7E8D45A42213A61A00FE10CA /* BoardViewCell.swift */,
+				7EECA30922152F2500838D11 /* GameResultTableViewCell.swift */,
+				7E8D45A22213A54500FE10CA /* BoardCellView.xib */,
+				7EECA30622152D8700838D11 /* GameResultCell.xib */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		8C1801BA755E054222C65903 /* Pods */ = {
@@ -303,6 +326,7 @@
 			files = (
 				7E8D4576221391DC00FE10CA /* LaunchScreen.storyboard in Resources */,
 				7E8D45A32213A54500FE10CA /* BoardCellView.xib in Resources */,
+				7EECA30722152D8700838D11 /* GameResultCell.xib in Resources */,
 				7E88F6BC2214FD4B00AFB624 /* GoogleService-Info.plist in Resources */,
 				7E8D45972213957E00FE10CA /* Assets.xcassets in Resources */,
 				7E8D4571221391DB00FE10CA /* Main.storyboard in Resources */,
@@ -407,12 +431,22 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ConnectFourApp/Pods-ConnectFourApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,9 +462,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E8D45A52213A61A00FE10CA /* BoardViewCell.swift in Sources */,
+				7EECA30522152D2800838D11 /* GameResultsViewController.swift in Sources */,
+				7EECA30A22152F2500838D11 /* GameResultTableViewCell.swift in Sources */,
 				7E8D456E221391DB00FE10CA /* ViewController.swift in Sources */,
+				7EECA310221537A200838D11 /* GameResults.swift in Sources */,
 				7E8D459B221398A900FE10CA /* AddTokenToGameBoard.swift in Sources */,
 				7E88F6BA2214E11D00AFB624 /* CheckForWinner.swift in Sources */,
+				7E9EE5852215074B0062CC10 /* AuthenticateViewController.swift in Sources */,
 				7E8D459F2213A35400FE10CA /* AppConstants.swift in Sources */,
 				7E8D45932213925600FE10CA /* Player.swift in Sources */,
 				7E8D45A12213A39B00FE10CA /* BoardViewPresenter.swift in Sources */,
@@ -602,7 +640,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WYWUC4P4DY;
 				INFOPLIST_FILE = ConnectFourApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ConnectFourApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -618,7 +659,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WYWUC4P4DY;
 				INFOPLIST_FILE = ConnectFourApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ConnectFourApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -634,7 +678,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConnectFourAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ConnectFourAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -651,7 +699,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConnectFourAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ConnectFourAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

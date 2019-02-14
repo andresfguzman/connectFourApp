@@ -35,6 +35,14 @@ class ViewController: UIViewController {
         informPlayerSwitched()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let targetVC = segue.destination as? AuthenticateViewController {
+            targetVC.presenter = presenter
+        } else if let targetCV = segue.destination as? GameResultsViewController {
+            targetCV.presenter = presenter
+        }
+    }
+    
     @IBAction func replayButtonTapped(_ sender: Any) {
         resetUI()
     }
@@ -73,6 +81,11 @@ extension ViewController: UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegate {}
 
 extension ViewController: BoardViewDelegate {
+    func playersChanged(playerOneNick: String, playerTwoNick: String) {
+        playerTurnIndicatorSegment.setTitle(playerOneNick, forSegmentAt: 0)
+        playerTurnIndicatorSegment.setTitle(playerTwoNick, forSegmentAt: 1)
+    }
+    
     func informWiner(player: Player) {
         statusDisplayLabel.text = "Player \(player.name) has won."
         boardCollectionView.isUserInteractionEnabled = false

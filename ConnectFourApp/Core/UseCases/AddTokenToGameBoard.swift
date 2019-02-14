@@ -24,18 +24,18 @@ final class AddTokenToGameBoardUseCase: AddTokenToGameBoard {
 private extension AddTokenToGameBoardUseCase {
     func addTokenToColumn(token: TokenProtocol, board: BoardProtocol) -> (BoardProtocol, Player?) {
         var newBoard = board
-        var winerPlayer: Player?
+        var winnerPlayer: Player?
         let boardRowOfInterest = board.tokenSlots.filter { $0.boardLocation.col == token.boardLocation.col }
         if boardRowOfInterest.count < 6 {
             var newToken = token
             newToken.boardLocation.row = boardRowOfInterest.count
             newBoard.tokenSlots.append(newToken)
-            let checkWinner = CheckForWinnerUseCase()
-            checkWinner.execute(board: newBoard) { (winer) in
-                winerPlayer = winer
+            let checkWinnerUseCase = CheckForWinnerUseCase()
+            checkWinnerUseCase.execute(board: newBoard) { (winner) in
+                winnerPlayer = winner
             }
             presenter.switchPlayers()
         }
-        return (newBoard, winerPlayer)
+        return (newBoard, winnerPlayer)
     }
 }
